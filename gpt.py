@@ -9,8 +9,11 @@ import os
 import pygame
 import random
 from gtts import gTTS
+from dotenv import load_dotenv
 
-openai.api_key = "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"
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API")
 chat_history = []
 prompt_file = "prompt.txt"
 
